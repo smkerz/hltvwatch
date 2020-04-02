@@ -1,0 +1,6 @@
+#/bin/bash
+BINARYPATH="$(dirname "${0}")"
+cd "${BINARYPATH}"
+LIBRARYPATH="$(pwd)"
+export LD_LIBRARY_PATH="${LIBRARYPATH}:${LD_LIBRARY_PATH}"
+./hltv $@
